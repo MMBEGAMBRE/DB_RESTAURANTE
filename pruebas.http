@@ -1,0 +1,60 @@
+### OBTENER TODAS LAS CATEGORÍAS
+GET http://localhost:3000/api/categorias
+
+### OBTENER CATEGORÍA POR ID
+GET http://localhost:3000/api/categorias/1
+
+### CREAR CATEGORÍA
+POST http://localhost:3000/api/categorias
+Content-Type: application/json
+
+{
+  "nombre": "aperitivos",
+  "descripcion": "platos para estimular el apetito"
+}
+
+### ACTUALIZAR CATEGORÍA
+PUT http://localhost:3000/api/categorias/1
+Content-Type: application/json
+
+{
+  "descripcion": "Descripción actualizada"
+}
+
+### ELIMINAR CATEGORÍA
+DELETE http://localhost:3000/api/categorias/5
+
+###PLATOS
+
+### OBTENER TODOS LOS PLATOS
+GET http://localhost:3000/api/libros
+
+### OBTENER LIBRO POR ID
+GET http://localhost:3000/api/libros/1
+
+### OBTENER LIBROS POR CATEGORÍA
+GET http://localhost:3000/api/libros/categoria/1
+
+### CREAR LIBRO
+POST http://localhost:3000/api/libros
+Content-Type: application/json
+
+{
+  "titulo": "La Sombra del Viento",
+  "autor": "Carlos Ruiz Zafón",
+  "isbn": "9788408172124",
+  "anio_publicacion": 2001,
+  "categoria_id": 1
+}
+
+### ACTUALIZAR LIBRO
+PUT http://localhost:3000/api/libros/1
+Content-Type: application/json
+
+{
+  "categoria_id": 2,
+  "anio_publicacion": 2020
+}
+
+### ELIMINAR LIBRO
+DELETE http://localhost:3000/api/libros/5
